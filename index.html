@@ -1,10 +1,226 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SurAddaX Music</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#080808;
+    color:white;
+    font-family:Arial, sans-serif;
+}
+
+header{
+    background:#111;
+    padding:22px 15px;
+    text-align:center;
+    border-bottom:2px solid #e50914;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#ff2020;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:white;
+}
+
+nav{
+    margin-top:12px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:14px;
+}
+
+.hero{
+    text-align:center;
+    padding:70px 20px;
+    background:linear-gradient(#180000,#080808);
+}
+
+.hero h1{
+    font-size:42px;
+    color:white;
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:#ff2020;
+}
+
+.hero p{
+    color:#bbb;
+    font-size:17px;
+    margin-bottom:25px;
+}
+
+.button{
+    display:inline-block;
+    background:#e50914;
+    color:white;
+    text-decoration:none;
+    padding:13px 25px;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+.section{
+    padding:45px 20px;
+    text-align:center;
+}
+
+.section h2{
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.cards{
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    width:280px;
+    background:#151515;
+    border:1px solid #333;
+    border-radius:12px;
+    padding:25px 15px;
+}
+
+.card h3{
+    color:#ff2020;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#aaa;
+    margin-bottom:18px;
+}
+
+.play{
+    display:inline-block;
+    background:#222;
+    color:white;
+    padding:9px 18px;
+    border-radius:20px;
+    text-decoration:none;
+}
+
+.youtube{
+    background:#120000;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#111;
+    color:#888;
+    border-top:1px solid #333;
+}
+
+@media(max-width:600px){
+    .hero h1{
+        font-size:32px;
+    }
+
+    .logo{
+        font-size:26px;
+    }
+
+    .card{
+        width:100%;
+        max-width:330px;
+    }
+}
+</style>
 </head>
+
 <body>
-<h1>SURADDAX MUSIC</h1>
-<p>Welcome to SurAddaX Music</p>
+
+<header>
+    <div class="logo">SurAddaX <span>Music</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#music">Music</a>
+        <a href="#youtube">YouTube</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Welcome to <span>SurAddaX</span></h1>
+    <p>Bollywood • Retro • Remix • Music</p>
+    <a class="button" href="#music">Explore Music</a>
+</section>
+
+<section class="section" id="music">
+    <h2>🎵 Latest Music</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Bollywood Retro</h3>
+            <p>Classic Bollywood songs and evergreen melodies.</p>
+            <a class="play" href="#">▶ Play Music</a>
+        </div>
+
+        <div class="card">
+            <h3>Love Collection</h3>
+            <p>Romantic songs for every mood.</p>
+            <a class="play" href="#">▶ Play Music</a>
+        </div>
+
+        <div class="card">
+            <h3>Remix Collection</h3>
+            <p>Fresh remix vibes from SurAddaX.</p>
+            <a class="play" href="#">▶ Play Music</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="section youtube" id="youtube">
+    <h2>▶ SurAddaX on YouTube</h2>
+    <p style="color:#aaa;margin-bottom:20px;">
+        Watch the latest music videos and remixes.
+    </p>
+
+    <a class="button" href="https://www.youtube.com/" target="_blank">
+        Visit YouTube
+    </a>
+</section>
+
+<section class="section" id="about">
+    <h2>About SurAddaX</h2>
+    <p style="color:#aaa;max-width:650px;margin:auto;line-height:1.7;">
+        Welcome to SurAddaX Music — a place for Bollywood,
+        retro melodies, romantic songs and remix vibes.
+    </p>
+</section>
+
+<footer>
+    © 2026 SurAddaX Music • All Rights Reserved
+</footer>
+
 </body>
 </html>
