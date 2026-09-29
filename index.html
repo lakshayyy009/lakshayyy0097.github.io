@@ -1,135 +1,64 @@
-/* MUSIC CARDS */
-.music-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SurAddaX Music</title>
 
-.card{
-    background:#111;
-    border:1px solid #242424;
-    border-radius:18px;
-    overflow:hidden;
-    transition:.3s;
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+font-family:Arial,sans-serif;
+background:#050505;
+color:white;
 }
-
-.card:hover{
-    transform:translateY(-8px);
-    border-color:#ff1744;
-    box-shadow:0 15px 40px rgba(255,23,68,.12);
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:18px 7%;
+background:#080808;
+border-bottom:1px solid #222;
+z-index:10;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
-
-.cover{
-    height:210px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:65px;
-    background:
-        radial-gradient(circle,#ff1744 0,#650019 25%,#170006 60%,#080808 100%);
+.logo{font-size:25px;font-weight:bold;letter-spacing:2px}
+.logo span{color:#ff1744}
+nav a{color:white;text-decoration:none;margin-left:20px;font-size:14px}
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 20px 60px;
+background:radial-gradient(circle,#520018,#100006 45%,#050505 75%);
+position:relative;
+overflow:hidden;
 }
-
-.card-content{
-    padding:22px;
+.hero:before{
+content:"";
+position:absolute;
+width:420px;
+height:420px;
+border:1px solid #ff1744;
+border-radius:50%;
+box-shadow:0 0 80px #ff1744;
+animation:spin 10s linear infinite;
 }
-
-.card-content h3{
-    margin-bottom:8px;
+.hero-content{position:relative;z-index:2}
+.badge{
+color:#ff1744;
+border:1px solid #ff1744;
+padding:8px 18px;
+border-radius:30px;
+display:inline-block;
+margin-bottom:25px;
+font-size:12px;
+letter-spacing:3px;
 }
-
-.card-content p{
-    color:#999;
-    font-size:14px;
-    line-height:1.6;
-}
-
-.play{
-    margin-top:18px;
-    display:inline-block;
-    color:#ff1744;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-/* FEATURE */
-.feature{
-    background:#0d0d0d;
-}
-
-.feature-box{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
-}
-
-.disc{
-    width:330px;
-    height:330px;
-    margin:auto;
-    border-radius:50%;
-    background:
-        repeating-radial-gradient(circle,#111 0,#111 5px,#1c1c1c 6px,#111 8px);
-    border:8px solid #222;
-    box-shadow:0 0 50px rgba(255,23,68,.25);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    animation:spin 8s linear infinite;
-}
-
-.disc-center{
-    width:90px;
-    height:90px;
-    background:#ff1744;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:12px;
-    font-weight:bold;
-    animation:spin 8s linear infinite reverse;
-}
-
-.feature-text h2{
-    font-size:42px;
-    margin-bottom:20px;
-}
-
-.feature-text p{
-    color:#aaa;
-    line-height:1.8;
-    margin-bottom:25px;
-}
-
-/* YOUTUBE */
-.youtube{
-    text-align:center;
-    background:
-        linear-gradient(135deg,#150006,#080808,#150006);
-}
-
-.youtube p{
-    max-width:650px;
-    margin:0 auto 30px;
-    color:#aaa;
-    line-height:1.7;
-}
-
-/* ABOUT */
-.about{
-    text-align:center;
-}
-
-.about p{
-    max-width:750px;
-    margin:auto;
-    color:#aaa;
-    line-height:1.8;
-}
-
-/* FOOTER */
-footer{
-    border-top:1px solid #222;
-    padding:35px 7%;
-    text-align:center
+h1{
+font-size:clamp(50px,10vw,100px
